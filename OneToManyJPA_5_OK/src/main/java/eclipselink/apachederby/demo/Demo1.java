@@ -14,7 +14,7 @@ import eclipselink.apachederby.entity.Players;
 public class Demo1 {
 
 	public static void main(String[] args) {
-		EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("OneToManyJPA_5");
+		EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("OneToManyJPA_5_OK");
 		EntityManager entitymanager = emfactory.createEntityManager();
 		// Players Photos
 
