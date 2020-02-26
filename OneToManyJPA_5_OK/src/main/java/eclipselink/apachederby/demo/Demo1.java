@@ -23,31 +23,29 @@ public class Demo1 {
 		players1.setBirth(new Date());
 		players1.setName("Veniamin");
 		players1.setSurname("Jessos");
-		
-		
+
 		Set<Photos> photoSet1 = new HashSet<Photos>() {
 			private static final long serialVersionUID = 1L;
 
 			{
-				  add(new Photos(  "Photos A1", players1));
-				  add(new Photos(  "Photos A2", players1));
-				  add(new Photos(  "Photos A2", players1));
+				add(new Photos("Photos A1", players1));
+				add(new Photos("Photos A2", players1));
+				add(new Photos("Photos A2", players1));
 
 			}
 		};
-		
+
 		players1.setPhotos(photoSet1);
-		
+
 		Players players2 = new Players();
 		players2.setAge(12);
 		players2.setBirth(new Date());
 		players2.setName("Nikola");
 		players2.setSurname("Nekolin");
-		
-		
+
 		Set<Photos> photoSet2 = new HashSet<Photos>() {
 			private static final long serialVersionUID = 1L;
-			
+
 			{
 				add(new Photos("Pic 21", players2));
 				add(new Photos("Pic 22", players2));
@@ -56,14 +54,12 @@ public class Demo1 {
 		};
 
 		players2.setPhotos(photoSet2);
-		
 
 		try {
 			entitymanager.getTransaction().begin();
 
 			entitymanager.persist(players1);
 			entitymanager.persist(players2);
-			
 
 			entitymanager.getTransaction().commit();
 			System.out.println("-----commited OK------");
@@ -77,7 +73,7 @@ public class Demo1 {
 			if (emfactory != null) {
 				emfactory.close();
 			}
-		} //---
+		} // ---
 
 	}
 
